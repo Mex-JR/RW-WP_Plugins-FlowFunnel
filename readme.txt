@@ -1,11 +1,10 @@
 === Chat Widget for flowfunnel.io ===
-Contributors: riverworksit
-Donate link: https://flowfunnel.io/
+Contributors: full360digital
 Tags: whatsapp, chat, widget, flowfunnel, support
 Requires at least: 5.0
 Tested up to: 6.8
-Stable tag: 1.0
-Requires PHP: 7.0
+Stable tag: 1.0.0
+Requires PHP: 7.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 

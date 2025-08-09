@@ -1,0 +1,54 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Chat Widget for flowfunnel.io 1.0.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/chat-widget-flowfunnel\n"
+"POT-Creation-Date: 2025-08-09 00:00+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Automated\n"
+"X-Domain: chat-widget-flowfunnel\n"
+
+#: chat-widget-flowfunnel.php:NNN
+msgid "Open chat options"
+msgstr ""
+
+#: chat-widget-flowfunnel.php:NNN
+msgid "How can we help?"
+msgstr ""
+
+#: chat-widget-flowfunnel.php:NNN
+msgid "by flowfunnel.io"
+msgstr ""
+
+#: includes/admin-settings.php:NNN
+msgid "Chat Widget for flowfunnel.io"
+msgstr ""
+
+#: includes/admin-settings.php:NNN
+msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/analytics.php:NNN
+msgid "Invalid security token."
+msgstr ""
+
+#: includes/analytics.php:NNN
+msgid "Click tracked successfully."
+msgstr ""
+
+#: includes/analytics.php:NNN
+msgid "Missing option parameter."
+msgstr ""
+
+#: includes/ajax-handlers.php:NNN
+msgid "Please provide a valid chat widget number."
+msgstr ""
+
+#: includes/ajax-handlers.php:NNN
+msgid "Number verified successfully."
+msgstr ""
+
+#: includes/ajax-handlers.php:NNN
+msgid "Could not verify chat widget number."
+msgstr ""
