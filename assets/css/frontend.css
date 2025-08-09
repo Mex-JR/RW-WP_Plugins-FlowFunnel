@@ -1,0 +1,232 @@
+.chatwidgetflowfunnel-container {
+    position: fixed;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.chatwidgetflowfunnel-container.bottom-right {
+    bottom: 0;
+    right: 0;
+}
+
+.chatwidgetflowfunnel-container.bottom-left {
+    bottom: 0;
+    left: 0;
+}
+
+.chatwidgetflowfunnel-button {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Classic Style */
+.chatwidgetflowfunnel-button.style1 {
+    font-size: 50px;
+    color: #25D366;
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.2));
+}
+
+.chatwidgetflowfunnel-button.style1:hover {
+    transform: scale(1.1);
+}
+
+/* Circle Style */
+.chatwidgetflowfunnel-button.style3 {
+    background: #25D366;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.chatwidgetflowfunnel-button.style3 i {
+    font-size: 32px;
+    color: white;
+}
+
+.chatwidgetflowfunnel-button.style3:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Modern Style */
+.chatwidgetflowfunnel-button.style4 {
+    background: #25D366;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.chatwidgetflowfunnel-button.style4 i {
+    font-size: 32px;
+    color: white;
+}
+
+.chatwidgetflowfunnel-button.style4:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* Popup styles */
+
+.chatwidgetflowfunnel-popup {
+    position: absolute;
+    bottom: 80px;
+    background: white;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.chatwidgetflowfunnel-container.bottom-right .chatwidgetflowfunnel-popup {
+    right: 20px;
+    left: auto;
+}
+.chatwidgetflowfunnel-container.bottom-left .chatwidgetflowfunnel-popup {
+    left: 20px;
+    right: auto;
+}
+
+.chatwidgetflowfunnel-popup.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.chatwidgetflowfunnel-button.disabled {
+    cursor: not-allowed;
+    background-color: #808080 !important;
+    position: relative;
+}
+
+.chatwidgetflowfunnel-button .verification-notice {
+    position: absolute;
+    background: #ff4444;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.chatwidgetflowfunnel-button.disabled:hover .verification-notice {
+    opacity: 1;
+}
+
+.popup-content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.popup-header {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-icon {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-icon i {
+    color: white;
+    font-size: 18px;
+}
+
+.popup-header h3 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.popup-options {
+    padding: 8px;
+}
+
+.chat-option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 14px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.chat-option:hover {
+    background: #f3f4f6;
+}
+
+.option-text {
+    flex: 1;
+}
+
+.chat-option i {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-left: 8px;
+}
+
+@media (max-width: 640px) {
+    .chatwidgetflowfunnel-popup {
+        position: fixed;
+        left: 16px !important;
+        right: 16px !important;
+        bottom: 80px;
+        width: auto;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.chatwidgetflowfunnel-brand-name {
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid #eee;
+    background: #f9f9f9;
+}
+
+.chatwidgetflowfunnel-brand-name a {
+    color: #666;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.chatwidgetflowfunnel-brand-name a:hover {
+    color: #333;
+}
+
+/* Remove these classes as they're no longer needed */
