@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Chat Widget for flowfunnel.io
+ * Plugin Name:       Chat Widget for flowfunnel
  * Plugin URI:        https://github.com/Mex-JR/RW-WP_Plugins-FlowFunnel
  * Description:       Customizable floating chat widget icon for your entire website with options.
  * Version:           1.0.0
@@ -10,7 +10,7 @@
  * Author URI:        https://riverworksit.com
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       chat-widget-flowfunnel
+ * Text Domain:       chat-widget-for-flowfunnel
  * Domain Path:       /languages
  *
  * @package ChatWidgetFlowFunnel
@@ -107,7 +107,7 @@ add_action( 'wp_enqueue_scripts', 'chatwidgetflowfunnel_enqueue_assets' );
 
 // Load Admin Assets
 function chatwidgetflowfunnel_enqueue_admin_assets( $hook ) {
-	if ( 'settings_page_chat-widget-flowfunnel-settings' !== $hook ) {
+	if ( 'settings_page_chat-widget-for-flowfunnel-settings' !== $hook ) {
 		return;
 	}
 	$font_awesome_url = plugin_dir_url( __FILE__ ) . 'assets/css/all.min.css';
@@ -150,7 +150,7 @@ function chatwidgetflowfunnel_button() {
 		<div class="chatwidgetflowfunnel-container <?php echo esc_attr( $position ); ?>">
 			<div class="chatwidgetflowfunnel-button <?php echo esc_attr( $icon_style ); ?>" onclick="toggleChatWidgetFlowfunnelPopup()">
 				<i class="fab fa-whatsapp" aria-hidden="true"></i>
-				<span class="screen-reader-text"><?php esc_html_e( 'Open chat options', 'chat-widget-flowfunnel' ); ?></span>
+				<span class="screen-reader-text"><?php esc_html_e( 'Open chat options', 'chat-widget-for-flowfunnel' ); ?></span>
 			</div>
 			<?php if ( ! empty( $inquiry_options ) ) : ?>
 				<div class="chatwidgetflowfunnel-popup hidden" id="chatwidgetflowfunnel-popup">
@@ -159,7 +159,7 @@ function chatwidgetflowfunnel_button() {
 							<div class="header-icon">
 								<i class="fab fa-whatsapp" aria-hidden="true"></i>
 							</div>
-							<h3><?php esc_html_e( 'How can we help?', 'chat-widget-flowfunnel' ); ?></h3>
+							<h3><?php esc_html_e( 'How can we help?', 'chat-widget-for-flowfunnel' ); ?></h3>
 						</div>
 						<div class="popup-options">
 							<?php
@@ -179,7 +179,7 @@ function chatwidgetflowfunnel_button() {
 						</div>
 						<div class="chatwidgetflowfunnel-brand-name">
 							<a href="https://flowfunnel.io" target="_blank" rel="noopener noreferrer">
-								<?php esc_html_e( 'by flowfunnel.io', 'chat-widget-flowfunnel' ); ?>
+								<?php esc_html_e( 'by flowfunnel.io', 'chat-widget-for-flowfunnel' ); ?>
 							</a>
 						</div>
 					</div>
@@ -193,7 +193,7 @@ add_action( 'wp_footer', 'chatwidgetflowfunnel_button' );
 
 // Add settings link to plugins page
 function chatwidgetflowfunnel_add_settings_link( $links ) {
-	$settings_link = '<a href="' . esc_url( admin_url( 'options-general.php?page=chat-widget-flowfunnel-settings' ) ) . '">' . esc_html__( 'Settings', 'chat-widget-flowfunnel' ) . '</a>';
+	$settings_link = '<a href="' . esc_url( admin_url( 'options-general.php?page=chat-widget-for-flowfunnel-settings' ) ) . '">' . esc_html__( 'Settings', 'chat-widget-for-flowfunnel' ) . '</a>';
 	array_unshift( $links, $settings_link );
 	return $links;
 }

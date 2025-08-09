@@ -12,10 +12,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Register settings page.
 function chatwidgetflowfunnel_menu() {
 	add_options_page(
-		__( 'Chat Widget for flowfunnel.io', 'chat-widget-flowfunnel' ),
-		__( 'Chat Widget for flowfunnel.io', 'chat-widget-flowfunnel' ),
+		__( 'Chat Widget for flowfunnel.io', 'chat-widget-for-flowfunnel' ),
+		__( 'Chat Widget for flowfunnel.io', 'chat-widget-for-flowfunnel' ),
 		'manage_options',
-		'chat-widget-flowfunnel-settings',
+		'chat-widget-for-flowfunnel-settings',
 		'chatwidgetflowfunnel_settings_page'
 	);
 }
@@ -25,7 +25,7 @@ add_action( 'admin_menu', 'chatwidgetflowfunnel_menu' );
 add_action( 'admin_enqueue_scripts', 'chatwidgetflowfunnel_admin_scripts' );
 
 function chatwidgetflowfunnel_admin_scripts( $hook ) {
-	if ( 'settings_page_chat-widget-flowfunnel-settings' !== $hook ) {
+	if ( 'settings_page_chat-widget-for-flowfunnel-settings' !== $hook ) {
 		return;
 	}
 	wp_enqueue_script(
@@ -56,7 +56,7 @@ function chatwidgetflowfunnel_settings_page() {
 			! isset( $_POST['chatwidgetflowfunnel_nonce'] ) ||
 			! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['chatwidgetflowfunnel_nonce'] ) ), 'chatwidgetflowfunnel_settings' )
 		) {
-			wp_die( esc_html__( 'Invalid nonce specified', 'chat-widget-flowfunnel' ), esc_html__( 'Error', 'chat-widget-flowfunnel' ), array( 'response' => 403 ) );
+			wp_die( esc_html__( 'Invalid nonce specified', 'chat-widget-for-flowfunnel' ), esc_html__( 'Error', 'chat-widget-for-flowfunnel' ), array( 'response' => 403 ) );
 		}
 
 		$settings_updated = false;
@@ -94,7 +94,7 @@ function chatwidgetflowfunnel_settings_page() {
 
 		if ( $settings_updated ) {
 			// Translators: Shown when settings saved.
-			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'Settings saved successfully.', 'chat-widget-flowfunnel' ) . '</p></div>';
+			echo '<div class="notice notice-success is-dismissible"><p>' . esc_html__( 'Settings saved successfully.', 'chat-widget-for-flowfunnel' ) . '</p></div>';
 		}
 	}
 
@@ -233,10 +233,10 @@ function chatwidgetflowfunnel_settings_page() {
 
 					<!-- Quick Stats Card -->
 					<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-						<h3 class="text-xl font-semibold mb-6 text-gray-700 pb-4 border-b"><?php esc_html_e( 'Quick Stats', 'chat-widget-flowfunnel' ); ?></h3>
+						<h3 class="text-xl font-semibold mb-6 text-gray-700 pb-4 border-b"><?php esc_html_e( 'Quick Stats', 'chat-widget-for-flowfunnel' ); ?></h3>
 						<div class="space-y-4">
 							<div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
-								<span class="text-sm font-medium text-gray-600"><?php esc_html_e( 'Total Clicks', 'chat-widget-flowfunnel' ); ?></span>
+								<span class="text-sm font-medium text-gray-600"><?php esc_html_e( 'Total Clicks', 'chat-widget-for-flowfunnel' ); ?></span>
 								<span class="text-lg font-semibold text-gray-900"><?php echo esc_html( $total_clicks ); ?></span>
 							</div>
 							<!-- <div class="space-y-2">
@@ -260,13 +260,13 @@ function chatwidgetflowfunnel_settings_page() {
 							<div class="space-y-4">
 								<!-- Button Position -->
 								<div class="space-y-2">
-									<label class="text-sm font-medium text-gray-700"><?php esc_html_e( 'Button Position', 'chat-widget-flowfunnel' ); ?></label>
+									<label class="text-sm font-medium text-gray-700"><?php esc_html_e( 'Button Position', 'chat-widget-for-flowfunnel' ); ?></label>
 									<div class="grid grid-cols-2 gap-4">
 										<label class="relative flex rounded-lg p-4 cursor-pointer hover:bg-gray-50">
 											<!-- Removed old WhatsApp option -->
 											<input type="radio" name="chatwidgetflowfunnel_chat_position" value="bottom-right" <?php checked( get_option( 'chatwidgetflowfunnel_chat_position' ), 'bottom-right' ); ?> class="sr-only peer">
 											<div class="flex items-center">
-												<div class="text-sm"><?php esc_html_e( 'Bottom Right', 'chat-widget-flowfunnel' ); ?></div>
+												<div class="text-sm"><?php esc_html_e( 'Bottom Right', 'chat-widget-for-flowfunnel' ); ?></div>
 											</div>
 											<div class="absolute inset-0 rounded-lg border-2 peer-checked:border-indigo-500 pointer-events-none"></div>
 										</label>
@@ -274,7 +274,7 @@ function chatwidgetflowfunnel_settings_page() {
 											<!-- Removed old WhatsApp option -->
 											<input type="radio" name="chatwidgetflowfunnel_chat_position" value="bottom-left" <?php checked( get_option( 'chatwidgetflowfunnel_chat_position' ), 'bottom-left' ); ?> class="sr-only peer">
 											<div class="flex items-center">
-												<div class="text-sm"><?php esc_html_e( 'Bottom Left', 'chat-widget-flowfunnel' ); ?></div>
+												<div class="text-sm"><?php esc_html_e( 'Bottom Left', 'chat-widget-for-flowfunnel' ); ?></div>
 											</div>
 											<div class="absolute inset-0 rounded-lg border-2 peer-checked:border-indigo-500 pointer-events-none"></div>
 										</label>
@@ -284,23 +284,23 @@ function chatwidgetflowfunnel_settings_page() {
 								<!-- WhatsApp Icon Style -->
 								<div class="space-y-2">
 									<!-- Removed old WhatsApp Icon Style label -->
-									<label class="text-sm font-medium text-gray-700"><?php esc_html_e( 'Chat Widget Icon Style', 'chat-widget-flowfunnel' ); ?></label>
+									<label class="text-sm font-medium text-gray-700"><?php esc_html_e( 'Chat Widget Icon Style', 'chat-widget-for-flowfunnel' ); ?></label>
 									<div class="grid grid-cols-3 gap-4">
 										<div class="style-option flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-gray-50 <?php echo $selected_icon === 'style1' ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200'; ?>" data-style="style1">
 											<i class="fab fa-whatsapp text-4xl mb-2 text-[#25D366]"></i>
-											<span class="text-sm"><?php esc_html_e( 'Classic', 'chat-widget-flowfunnel' ); ?></span>
+											<span class="text-sm"><?php esc_html_e( 'Classic', 'chat-widget-for-flowfunnel' ); ?></span>
 										</div>
 										<div class="style-option flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-gray-50 <?php echo $selected_icon === 'style3' ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200'; ?>" data-style="style3">
 											<div class="relative w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center mb-2">
 												<i class="fab fa-whatsapp text-2xl text-white"></i>
 											</div>
-											<span class="text-sm"><?php esc_html_e( 'Circle', 'chat-widget-flowfunnel' ); ?></span>
+											<span class="text-sm"><?php esc_html_e( 'Circle', 'chat-widget-for-flowfunnel' ); ?></span>
 										</div>
 										<div class="style-option flex flex-col items-center p-4 border rounded-lg cursor-pointer hover:bg-gray-50 <?php echo $selected_icon === 'style4' ? 'border-indigo-500 bg-indigo-50' : 'border-gray-200'; ?>" data-style="style4">
 											<div class="relative w-10 h-10 bg-[#25D366] rounded-lg flex items-center justify-center mb-2">
 												<i class="fab fa-whatsapp text-2xl text-white"></i>
 											</div>
-											<span class="text-sm"><?php esc_html_e( 'Modern', 'chat-widget-flowfunnel' ); ?></span>
+											<span class="text-sm"><?php esc_html_e( 'Modern', 'chat-widget-for-flowfunnel' ); ?></span>
 										</div>
 									</div>
 									<!-- Removed old WhatsApp Icon Style input -->
@@ -312,11 +312,11 @@ function chatwidgetflowfunnel_settings_page() {
 						<!-- Inquiry Options Card -->
 						<div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
 							<div class="flex items-center justify-between mb-6 pb-4 border-b">
-								<h3 class="text-xl font-semibold text-gray-700"><?php esc_html_e( 'Inquiry Options', 'chat-widget-flowfunnel' ); ?></h3>
+								<h3 class="text-xl font-semibold text-gray-700"><?php esc_html_e( 'Inquiry Options', 'chat-widget-for-flowfunnel' ); ?></h3>
 								<button type="button"
 									onclick="addInquiryField()"
 									class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
-									<?php esc_html_e( 'Add Option', 'chat-widget-flowfunnel' ); ?>
+									<?php esc_html_e( 'Add Option', 'chat-widget-for-flowfunnel' ); ?>
 								</button>
 							</div>
 							<div id="inquiry-options" class="space-y-3">
@@ -364,7 +364,7 @@ function chatwidgetflowfunnel_settings_page() {
 					<button type="submit"
 						name="chatwidgetflowfunnel_save"
 						class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-colors">
-						<?php esc_html_e( 'Save Changes', 'chat-widget-flowfunnel' ); ?>
+						<?php esc_html_e( 'Save Changes', 'chat-widget-for-flowfunnel' ); ?>
 					</button>
 				</div>
 			</form>

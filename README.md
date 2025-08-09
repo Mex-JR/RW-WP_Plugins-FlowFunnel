@@ -27,7 +27,7 @@ A customizable floating WhatsApp chat widget for WordPress websites. Easily add 
 - Images: Widget branding
 
 ## Development
-- All main code is in `chat-widget-flowfunnel.php`.
+- All main code is in `chat-widget-for-flowfunnel.php`.
 - Admin logic: `includes/admin-settings.php`
 - AJAX handlers: `includes/ajax-handlers.php`
 - Analytics: `includes/analytics.php`

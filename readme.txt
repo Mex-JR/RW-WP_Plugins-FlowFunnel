@@ -1,4 +1,4 @@
-=== Chat Widget for flowfunnel.io ===
+=== Chat Widget for flowfunnel ===
 Contributors: full360digital
 Tags: whatsapp, chat, widget, flowfunnel, support
 Requires at least: 5.0
