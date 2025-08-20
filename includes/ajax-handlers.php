@@ -10,13 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // AJAX handler for Chat Widget number verification.
-add_action( 'wp_ajax_verify_chatwidgetflowfunnel_number', 'chatwidgetflowfunnel_verify_number_handler' );
+add_action( 'wp_ajax_chatwidgetflowfunnel_verify_number', 'chatwidgetflowfunnel_verify_number_handler' );
+add_action( 'wp_ajax_nopriv_chatwidgetflowfunnel_verify_number', 'chatwidgetflowfunnel_verify_number_handler' );
 
 /**
  * Simulated number verification (placeholder for real service integration).
  */
 function chatwidgetflowfunnel_verify_number_handler() {
-	if ( ! check_ajax_referer( 'verify_chatwidgetflowfunnel_number', 'nonce', false ) ) {
+	if ( ! check_ajax_referer( 'chatwidgetflowfunnel_verify_number', 'nonce', false ) ) {
 		wp_send_json_error( array( 'message' => __( 'Invalid security token.', 'chat-widget-for-flowfunnel' ) ) );
 	}
 

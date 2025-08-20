@@ -99,7 +99,7 @@ function chatwidgetflowfunnel_enqueue_assets() {
 			'inquiryOptions'  => get_option( 'chatwidgetflowfunnel_chat_options', array() ),
 			'trackingEnabled' => get_option( 'chatwidgetflowfunnel_chat_tracking', 'no' ),
 			'ajaxurl'         => admin_url( 'admin-ajax.php' ),
-			'nonce'           => wp_create_nonce( 'easy_chat_track_nonce' ),
+			'nonce'           => wp_create_nonce( 'chatwidgetflowfunnel_track_nonce' ),
 		)
 	);
 }

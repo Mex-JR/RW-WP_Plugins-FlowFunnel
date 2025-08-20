@@ -39,7 +39,7 @@ function chatwidgetflowfunnel_admin_scripts( $hook ) {
 		'chatwidgetflowfunnel-admin-settings',
 		'chatwidgetflowfunnelAdminSettings',
 		array(
-			'nonce' => wp_create_nonce( 'verify_chatwidgetflowfunnel_number' ),
+			'nonce' => wp_create_nonce( 'chatwidgetflowfunnel_verify_number' ),
 		)
 	);
 }
@@ -110,7 +110,7 @@ function chatwidgetflowfunnel_settings_page() {
 	$total_clicks  = 0;
 	$option_clicks = array();
 	foreach ( $inquiry_options as $option ) {
-		$count                    = (int) get_option( 'easy_chat_clicks_' . sanitize_key( $option ), 0 );
+		$count                    = (int) get_option( 'chatwidgetflowfunnel_clicks_' . sanitize_key( $option ), 0 );
 		$option_clicks[ $option ] = $count;
 		$total_clicks            += $count;
 	}

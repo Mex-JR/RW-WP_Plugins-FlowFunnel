@@ -27,7 +27,7 @@ function trackChatWidgetFlowfunnelClick(option) {
             url: window.chatwidgetflowfunnelData.ajaxurl,
             type: 'POST',
             data: {
-                action: 'track_chat_click',
+                action: 'chatwidgetflowfunnel_track_chat_click',
                 option: option,
                 nonce: window.chatwidgetflowfunnelData.nonce || ''
             },
