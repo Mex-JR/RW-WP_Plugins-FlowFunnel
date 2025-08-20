@@ -6,8 +6,8 @@
  * Version:           1.0.0
  * Requires at least: 5.0
  * Requires PHP:      7.2
- * Author:            RiverWork IT LLC
- * Author URI:        https://riverworksit.com
+ * Author:            Flowfunnel
+ * Author URI:        https://flowfunnel.io
  * License:           GPLv2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       chat-widget-for-flowfunnel

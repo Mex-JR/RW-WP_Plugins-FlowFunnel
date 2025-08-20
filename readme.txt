@@ -36,7 +36,7 @@ Basic analytics are included and can be enabled/disabled in settings.
 First public release.
 
 == Credits ==
-Developed by RiverWork IT LLC. Powered by flowfunnel.io.
+Developed by Flowfunnel. Powered by flowfunnel.io.
 
 == License ==
 This plugin is free software: you can redistribute it and/or modify

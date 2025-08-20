@@ -39,4 +39,4 @@ Pull requests and suggestions are welcome!
 GPL v2. See `LICENSE` for details.
 
 ## Credits
-Developed by RiverWork IT LLC. Powered by [flowfunnel.io](https://flowfunnel.io).
+Developed by Flowfunnel. Powered by [flowfunnel.io](https://flowfunnel.io).
