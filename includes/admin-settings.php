@@ -314,7 +314,7 @@ function chatwidgetflowfunnel_settings_page() {
 							<div class="flex items-center justify-between mb-6 pb-4 border-b">
 								<h3 class="text-xl font-semibold text-gray-700"><?php esc_html_e( 'Inquiry Options', 'chat-widget-for-flowfunnel' ); ?></h3>
 								<button type="button"
-									onclick="addInquiryField()"
+									id="chatwidgetflowfunnel-add-inquiry"
 									class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
 									<?php esc_html_e( 'Add Option', 'chat-widget-for-flowfunnel' ); ?>
 								</button>
@@ -327,8 +327,7 @@ function chatwidgetflowfunnel_settings_page() {
 											value="<?php echo esc_attr( $option ); ?>"
 											class="flex-1 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500">
 										<button type="button"
-											onclick="removeInquiryField(this)"
-											class="inline-flex items-center p-2 border border-transparent rounded-md text-red-600 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+											class="chatwidgetflowfunnel-remove-btn inline-flex items-center p-2 border border-transparent rounded-md text-red-600 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
 											<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 												<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
 											</svg>
@@ -336,26 +335,7 @@ function chatwidgetflowfunnel_settings_page() {
 									</div>
 								<?php endforeach; ?>
 							</div>
-							<script>
-								function addInquiryField() {
-									var container = document.getElementById('inquiry-options');
-									var div = document.createElement('div');
-									div.className = 'flex items-center space-x-2 p-2 rounded-lg bg-gray-50';
-									div.innerHTML = `
-									<input type="text" name="chatwidgetflowfunnel_chat_options[]" class="flex-1 rounded-md border-gray-300 focus:ring-indigo-500 focus:border-indigo-500" />
-									<button type="button" onclick="removeInquiryField(this)" class="inline-flex items-center p-2 border border-transparent rounded-md text-red-600 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
-										<svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-											<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-										</svg>
-									</button>
-								`;
-									container.appendChild(div);
-								}
-
-								function removeInquiryField(btn) {
-									btn.parentNode.remove();
-								}
-							</script>
+							<!-- JavaScript for adding/removing inquiry fields and style selection is loaded from admin-settings.js -->
 						</div>
 					</div>
 				</div>

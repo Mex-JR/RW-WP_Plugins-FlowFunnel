@@ -148,7 +148,7 @@ function chatwidgetflowfunnel_button() {
 		$base_url = 'https://wa.me/' . rawurlencode( $full_number );
 		?>
 		<div class="chatwidgetflowfunnel-container <?php echo esc_attr( $position ); ?>">
-			<div class="chatwidgetflowfunnel-button <?php echo esc_attr( $icon_style ); ?>" onclick="toggleChatWidgetFlowfunnelPopup()">
+			<div class="chatwidgetflowfunnel-button <?php echo esc_attr( $icon_style ); ?>" role="button" tabindex="0">
 				<i class="fab fa-whatsapp" aria-hidden="true"></i>
 				<span class="screen-reader-text"><?php esc_html_e( 'Open chat options', 'chat-widget-for-flowfunnel' ); ?></span>
 			</div>
@@ -171,7 +171,7 @@ function chatwidgetflowfunnel_button() {
 									target="_blank"
 									rel="noopener noreferrer"
 									class="chat-option"
-									onclick="trackChatWidgetFlowfunnelClick('<?php echo esc_js( $option_safe ); ?>')">
+									data-chat-option="<?php echo esc_attr( $option_safe ); ?>">
 									<span class="option-text"><?php echo esc_html( $option_safe ); ?></span>
 									<i class="fas fa-chevron-right" aria-hidden="true"></i>
 								</a>
